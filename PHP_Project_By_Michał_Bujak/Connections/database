@@ -1,0 +1,38 @@
+CREATE DATABASE task_michal
+
+CREATE TABLE dane(
+    id_dane int AUTO_INCREMENT PRIMARY KEY,
+    nazwa_uzytkownika varchar(15),
+    haslo varchar(15),
+    email varchar(20),
+    imie char(15),
+    nazwisko char(15),
+    wiek int(2)
+)
+CREATE TABLE ksiazki(
+    id_ksiazki int AUTO_INCREMENT PRIMARY KEY,
+    tytul varchar(20),
+    podtytul varchar(20),
+    imie_autora char(15),
+    nazwisko_autora char(15),
+    rok_wydania int(4),
+    wydawnictwo varchar(20)
+)
+CREATE TABLE zamowienia(
+    id_zamowienia int AUTO_INCREMENT PRIMARY KEY,
+    numer_zamowienia int(11),
+    imie_zamawiajacego char(15),
+    nazwisko_zamawiajacego char(15),
+    zamowione_ksiazk varchar(50),
+    ilosc_ksiazek int(5),
+    wartosc_zamowienia int(7)
+)
+CREATE TABLE autorzy(
+    id_autorzy int AUTO_INCREMENT PRIMARY KEY,
+    imie char(15),
+    nazwisko char(15),
+    data_urodzenia int(10),
+    ilosc_napisanych_ksiazek int(4),
+    pochodzenie varchar(20),
+    popularnosc int(9)
+)
